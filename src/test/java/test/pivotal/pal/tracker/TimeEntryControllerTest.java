@@ -97,7 +97,7 @@ public class TimeEntryControllerTest {
         assertThat(response.getBody()).isEqualTo(expected);
     }
 
-    @Test
+   @Test
     public void testUpdate_NotFound() throws Exception {
         doReturn(null)
             .when(timeEntryRepository)
