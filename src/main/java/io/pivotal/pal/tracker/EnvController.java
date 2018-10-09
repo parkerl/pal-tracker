@@ -12,7 +12,12 @@ public class EnvController {
 
     private final Map<String, String> env;
     
-    public EnvController(@Value("${PORT:NOT SET}") String port, @Value("${MEMORY_LIMIT:NOT SET}") String memoryLimit, @Value("${CF_INSTANCE_INDEX:NOT SET}") String cfInstanceIndex, @Value("${CF_INSTANCE_ADDR:NOT SET}") String cfInstanceAddr){
+    public EnvController(
+            @Value("${PORT}") String port,
+                         @Value("${MEMORY_LIMIT}") String memoryLimit,
+                         @Value("${CF_INSTANCE_INDEX}") String cfInstanceIndex,
+                         @Value("${CF_INSTANCE_ADDR}") String cfInstanceAddr
+    ){
         env = new HashMap<>();
         env.put("PORT", port);
         env.put("MEMORY_LIMIT", memoryLimit);
