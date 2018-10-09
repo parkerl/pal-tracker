@@ -5,4 +5,4 @@ applications:
   routes:
   - route: pal664fce44-cb40-11e8-a151-a7944aaa1620.apps.pikes.pal.pivotal.io
   env:
-    WELCOME_MESSAGE: Hello from the review environment
+    WELCOME_MESSAGE: Hello from the review environment from Travis
