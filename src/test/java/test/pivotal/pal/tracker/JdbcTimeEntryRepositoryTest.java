@@ -44,7 +44,7 @@ public class JdbcTimeEntryRepositoryTest {
         assertThat(foundEntry.get("id")).isEqualTo(entry.getId());
         assertThat(foundEntry.get("project_id")).isEqualTo(123L);
         assertThat(foundEntry.get("user_id")).isEqualTo(321L);
-        assertThat(((Date)foundEntry.get("date")).toLocalDate()).isEqualTo(LocalDate.parse("2017-01-09"));
+        assertThat(((Date) foundEntry.get("date")).toLocalDate()).isEqualTo(LocalDate.parse("2017-01-09"));
         assertThat(foundEntry.get("hours")).isEqualTo(8);
     }
 
@@ -59,6 +59,7 @@ public class JdbcTimeEntryRepositoryTest {
         assertThat(entry.getDate()).isEqualTo(LocalDate.parse("2017-01-09"));
         assertThat(entry.getHours()).isEqualTo(8);
     }
+
 
     @Test
     public void findFindsATimeEntry() throws Exception {
